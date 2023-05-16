@@ -1,0 +1,16 @@
+$primary-color: #ffcc00;
+$secondary-color: #0b0b0b;
+$dark-color: #18191b;
+$medium-color: #888;
+$light-color: #eceff3;
+$max-width-xxl: 1320px;
+$max-width-xl: 1140px;
+$max-width-lg: 960px;
+$max-width-md: 720px;
+$max-width-sm: 540px;
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 90deg;
+    inherits: false;
+}

@@ -1,0 +1,158 @@
+@media screen and (max-width:1200px) {
+
+    .container {
+        max-width: $max-width-xl;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    %btn-shared {
+        padding-right: 0.8rem;
+    }
+
+    .container {
+        max-width: $max-width-lg;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+
+    }
+
+    #main {
+        .container {
+            display: flex;
+            flex-direction: column-reverse;
+
+
+            #section {
+                &__skills {
+                    width: 100%;
+                }
+
+                &__about {
+                    width: 100%;
+
+                    .profile {
+                        flex-direction: row-reverse;
+                        gap: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #section {
+        &__projects {
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &__process {
+            .process {
+                flex-wrap: wrap;
+
+                div {
+                    width: 48%;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: $max-width-md;
+    }
+
+    html {
+        font-size: 12px !important;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    #header {
+        &-main {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-nav {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        max-width: $max-width-sm;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    #main {
+        .container {
+            #section {
+                &__about {
+
+                    .profile {
+                        &-photo {
+                            width: 15rem;
+                            height: 15rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section {
+        &__projects {
+
+            .projects {
+                grid-template-columns: 1fr;
+
+                .project {
+
+                    .img-wrapper {
+                        display: block;
+                        height: 250px;
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+
+        &__process {
+            .process {
+                div {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__contact {
+            .contact {
+                &-form {
+                    grid-template-areas:
+                        'name'
+                        'email'
+                        'subject'
+                        'phone'
+                        'massage'
+                        'submit';
+                }
+            }
+        }
+    }
+}

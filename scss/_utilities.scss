@@ -1,0 +1,165 @@
+.container {
+    max-width: $max-width-xxl;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+// Buttons
+%btn-shared {
+    display: inline-block;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    border: none;
+    transition: .5s ease;
+    color: $light-color;
+    text-transform: uppercase
+}
+
+.btn {
+    @extend %btn-shared;
+
+    &-primary {
+        @extend %btn-shared;
+        background-color: $primary-color;
+    }
+
+    &-secondary {
+        @extend %btn-shared;
+        background-color: $secondary-color;
+    }
+
+    &-light {
+        @extend %btn-shared;
+        background-color: $light-color;
+        color: $dark-color;
+    }
+
+}
+
+a[class*="btn-"],
+input[class*="btn-"],
+button[class*="btn-"] {
+    &:hover {
+        background-color: $dark-color;
+    }
+}
+
+// Paddings
+.p {
+    &-1 {
+        padding: 1rem;
+    }
+
+    &-2 {
+        padding: 2rem;
+    }
+
+    &-3 {
+        padding: 3rem;
+    }
+
+    &-4 {
+        padding: 4rem;
+    }
+
+    &-5 {
+        padding: 5rem;
+    }
+}
+
+.py {
+    &-1 {
+        padding: 1rem 0;
+    }
+
+    &-2 {
+        padding: 2rem 0;
+    }
+
+    &-3 {
+        padding: 3rem 0;
+    }
+
+    &-4 {
+        padding: 4rem 0;
+    }
+}
+
+// Margins
+.my {
+    &-1 {
+        margin: 1rem 0;
+    }
+
+    &-2 {
+        margin: 2rem 0;
+    }
+
+    &-3 {
+        margin: 3rem 0;
+    }
+
+    &-4 {
+        margin: 4rem 0;
+    }
+}
+
+// Section Title
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+        color: $primary-color;
+    }
+}
+
+//Paragraph
+.lead {
+    font-size: 1.4rem;
+    word-spacing: 2px;
+    line-height: 1.2;
+}
+
+// Text-Center
+.text-center {
+    text-align: center;
+}
+
+// Seperator 
+.separator {
+    animation: swing 1.2s linear 2.3s;
+    text-align: center;
+    transform-origin: 50% 0%;
+
+    div {
+        width: 240px;
+        margin: 0 auto;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 45%;
+            top: 50%;
+            left: 0;
+            border-bottom: 1px solid $medium-color;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 45%;
+            top: 50%;
+            right: 0;
+            border-bottom: 1px solid $medium-color;
+        }
+
+        .fa-circle {
+            font-size: .4rem;
+            color: $primary-color;
+            vertical-align: middle;
+        }
+    }
+}
